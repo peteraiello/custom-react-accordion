@@ -18,7 +18,7 @@ const Accordion = () => {
                 className={index === active ? 'active' : 'inactive'}
                 >
                 {tab.title}
-                <span className={index === active ? 'plus' : 'minus'}></span>
+                <span className={index === active ? 'minus' : 'plus'}></span>
                 </button>
                 { index === active ? <div className="panel"> {tab.description} </div> : ''}
             </div>
