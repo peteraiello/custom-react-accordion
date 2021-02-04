@@ -1,0 +1,83 @@
+/* 
+  #dark-grey: #333333;
+  #medium-grey: #999999;
+  #orange-highlight: ##DFBD85;
+  #medium-light-grey: #c4c4c4;
+  #light-grey: #e0e0e0;
+  #sandy-grey: #f2f1e8;
+*/
+
+.content {
+  min-height: calc(100vh - 150px);
+  max-width: 500px;
+  margin: 5rem auto 0 auto;
+  padding: 0 1rem;
+}
+
+.app-description {
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+p { 
+  line-height: 1.75rem;
+}
+
+button {
+  position: relative;
+  background: #c4c4c4;
+  border-radius: 1rem;
+  border: none;
+  font-size: 1.2rem;
+  width: 100%;
+  text-align: left;
+  color: #ffffff;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  padding: 1rem;
+}
+
+button:focus{
+  outline: none;
+}
+
+button.active {
+  background: #999999;
+  border: #dfbd85 solid 1px;
+}
+
+button:hover {
+    background: #999999;
+}
+
+.minus::after {
+  content: url('../src/assets/minus_ic.svg');
+  margin-right: 0;
+  position: absolute;
+  right: 1rem;
+}
+
+.plus::after {
+  content: url('../src/assets/plus_ic.svg');
+  margin-right: 0;
+  position: absolute;
+  right: 1rem;
+}
+
+.panel {
+  background: #e0e0e0;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+
+.panel p {
+  margin: 0;
+}
+
+.footer {
+  text-align: center;
+  height: 50px;
+}
