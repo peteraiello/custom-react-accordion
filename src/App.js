@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <div className="content">
         <div className="app-description">
-          <img src={logo} className="peter-aiello-logo" alt="logo" />
+          <a href="https://peteraiello.dev" rel="noreferrer" target="_blank"><img src={logo} className="peter-aiello-logo" alt="logo" /></a>
           <h3>Custom React Accordion</h3>
         </div>
 
@@ -17,7 +17,7 @@ function App() {
 
       <footer className="footer">
             <p>
-              Code on GitHub
+              Code on <a href="https://github.com/peteraiello/custom-react-accordion" rel="noreferrer" target="_blank">GitHub</a>
             </p>
       </footer>
     </div>

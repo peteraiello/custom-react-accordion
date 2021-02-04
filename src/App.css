@@ -1,11 +1,15 @@
 /* 
   #dark-grey: #333333;
   #medium-grey: #999999;
-  #orange-highlight: ##DFBD85;
+  #orange-highlight: #DFBD85;
   #medium-light-grey: #c4c4c4;
   #light-grey: #e0e0e0;
   #sandy-grey: #f2f1e8;
 */
+
+a {
+  color: #DFBD85;
+}
 
 .content {
   min-height: calc(100vh - 150px);
