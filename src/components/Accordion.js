@@ -6,23 +6,21 @@ const Accordion = () => {
     const [active, setActive] = useState(0);
     const dataCount = data.length -1;
 
-    const eventHandler = (e, index) => {
-        e.preventDefault();
-        setActive(index);
-    }
-
     const keyPressed = (e) => {
         e.preventDefault();
         console.log(dataCount);
         let key = e.key;
-        let arrowUp = 'ArrowUp';
-        let arrowDown = 'ArrowDown';
-        if(key === arrowDown && active < dataCount) {
+        if(key === 'ArrowDown' && active < dataCount) {
             setActive(active +1);
         }
-        if(key === arrowUp && active > 0) {
+        if(key === 'ArrowUp' && active > 0) {
             setActive(active -1);
         }
+    }
+
+    const eventHandler = (e, index) => {
+        e.preventDefault();
+        setActive(index);
     }
 
     return(
@@ -36,9 +34,12 @@ const Accordion = () => {
                     {tab.title}
                     <span className={index === active ? 'plus' : 'minus'}></span>
                     </button>
-                    { index === active ? <div className="panel"> {tab.description} </div> : ''}
+                    <div className={ index === active ? 'panel-open' : 'panel-close' }>
+                            { tab.description }
+                    </div>
                 </div>
-                ))}
+                ))
+            }
             </form>
         </div>
     );

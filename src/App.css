@@ -49,12 +49,13 @@ button:focus{
 }
 
 button.active {
-  background: #999999;
+  background-color: #dfbd85;
+  color: #333333;
   border: #dfbd85 solid 1px;
 }
 
 button:hover {
-    background: #999999;
+    background-color: #dfbd85;
 }
 
 .minus::after {
@@ -71,10 +72,28 @@ button:hover {
   right: 1rem;
 }
 
-.panel {
+.panel-close { 
   background: #e0e0e0;
-  padding: 1rem 2rem;
+  box-sizing: border-box;
+  padding: 0.5rem 1rem 0 1rem;
+  opacity:0;
+  width:100%;
+  height:0;
+  overflow: hidden;
+  transition: height 0.5s, opacity 0.5s;
+}
+
+.panel-open {
+  overflow: hidden;
+  background: #e0e0e0;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
   border-radius: 1rem;
+  opacity:1;
+  width:100%;
+  height: auto;
+  transition: height 0.5s, opacity 0.5s;
 }
 
 .panel p {
