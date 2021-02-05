@@ -4,11 +4,13 @@ import data from '../data.json';
 const Accordion = () => {
     
     const [active, setActive] = useState(0);
+
     const dataCount = data.length -1;
 
     const keyPressed = (e) => {
         e.preventDefault();
-        console.log(dataCount);
+        console.log('key event fired');
+
         let key = e.key;
         if(key === 'ArrowDown' && active < dataCount) {
             setActive(active +1);
@@ -24,7 +26,11 @@ const Accordion = () => {
     }
 
     return(
-        <div onKeyUp={(e) => keyPressed(e)}>
+        <div 
+            onKeyUp={(e) => keyPressed(e)}
+            suppressContentEditableWarning={true}
+            contentEditable={true}
+        >
             <form>
             { data.map((tab, index) => (
                 <div key={index}>
