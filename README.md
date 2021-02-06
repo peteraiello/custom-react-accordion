@@ -10,3 +10,5 @@ of the accordion should be open by default. The active item should also close au
 ---
 
 I adapted [this answer](https://stackoverflow.com/questions/43702454/reactjs-fade-in-div-and-fade-out-div-based-on-state) on CSS transitions based on state for the panel. 
+
+Issue with Firefox on synthetic events. 

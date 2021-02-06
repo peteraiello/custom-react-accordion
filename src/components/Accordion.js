@@ -9,8 +9,6 @@ const Accordion = () => {
 
     const keyPressed = (e) => {
         e.preventDefault();
-        console.log('key event fired');
-
         let key = e.key;
         if(key === 'ArrowDown' && active < dataCount) {
             setActive(active +1);
@@ -28,8 +26,6 @@ const Accordion = () => {
     return(
         <div 
             onKeyUp={(e) => keyPressed(e)}
-            suppressContentEditableWarning={true}
-            contentEditable={true}
         >
             <form>
             { data.map((tab, index) => (
