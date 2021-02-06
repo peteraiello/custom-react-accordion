@@ -25,6 +25,7 @@ const Accordion = () => {
     return(
         <div 
             onKeyUp={(e) => keyPressed(e)}
+            tabIndex={1}
         >
             <form>
             { data.map((tab, index) => (
