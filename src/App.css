@@ -31,7 +31,8 @@ p {
 }
 
 button {
-  position: relative;
+  display: flex;
+  align-items: center;
   background: #c4c4c4;
   border-radius: 1rem;
   border: none;
@@ -50,7 +51,7 @@ button:focus{
 
 button.active {
   background-color: #dfbd85;
-  color: #333333;
+  color: #ffffff;
   border: #dfbd85 solid 1px;
 }
 
@@ -58,18 +59,25 @@ button:hover {
     background-color: #dfbd85;
 }
 
-.minus::after {
-  content: url('../src/assets/minus_ic.svg');
-  margin-right: 0;
-  position: absolute;
-  right: 1rem;
+.title-wrapper {
+  flex: 1;
 }
 
-.plus::after {
-  content: url('../src/assets/plus_ic.svg');
-  margin-right: 0;
-  position: absolute;
-  right: 1rem;
+.minus {
+  content: url('../src/assets/line.svg');
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.plus {
+  content: url('../src/assets/plus.svg');
+  display: block;
+  width: 24px;
+  height: 24px;
+  transform: rotate(90deg);
+  transition-timing-function: ease-in;
+  transition: all 1s;
 }
 
 .panel-close { 
@@ -80,7 +88,8 @@ button:hover {
   width:100%;
   height:0;
   overflow: hidden;
-  transition: height 0.5s, opacity 0.5s;
+  transition-timing-function: ease-out;
+  transition: all 1s;
 }
 
 .panel-open {
@@ -93,7 +102,8 @@ button:hover {
   opacity:1;
   width:100%;
   height: auto;
-  transition: height 0.5s, opacity 0.5s;
+  transition-timing-function: ease-in;
+  transition: all 1s;
 }
 
 .panel p {

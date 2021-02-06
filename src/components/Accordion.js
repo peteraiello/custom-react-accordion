@@ -4,7 +4,6 @@ import data from '../data.json';
 const Accordion = () => {
     
     const [active, setActive] = useState(0);
-
     const dataCount = data.length -1;
 
     const keyPressed = (e) => {
@@ -30,11 +29,14 @@ const Accordion = () => {
             <form>
             { data.map((tab, index) => (
                 <div key={index}>
+
                     <button onClick={(e) => eventHandler(e, index)}
                     className={index === active ? 'active' : 'inactive'}
                     >
-                    {tab.title}
-                    <span className={index === active ? 'plus' : 'minus'}></span>
+                        <div className="title-wrapper">
+                            {tab.title}
+                        </div>
+                        <div className={index === active ? 'plus' : 'minus'}></div>
                     </button>
                     <div className={ index === active ? 'panel-open' : 'panel-close' }>
                             { tab.description }
