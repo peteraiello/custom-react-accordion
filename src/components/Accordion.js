@@ -3,48 +3,45 @@ import data from '../data.json';
 
 const Accordion = () => {
     
-    const [active, setActive] = useState(0);
-    const dataCount = data.length -1;
+    let indexPlus;
 
-    const keyPressed = (e) => {
-        e.preventDefault();
-        let key = e.key;
-        if(key === 'ArrowDown' && active < dataCount) {
-            setActive(active +1);
-        }
-        if(key === 'ArrowUp' && active > 0) {
-            setActive(active -1);
-        }
-    }
+    const [active, setActive] = useState(0);
 
     const eventHandler = (e, index) => {
         e.preventDefault();
         setActive(index);
+        console.log(active);
+    }
+
+    const indexCount = (index) => {
+        indexPlus = index + 1;
+        return indexPlus;
     }
 
     return(
-        <div 
-            onKeyUp={(e) => keyPressed(e)}
-            tabIndex={1}
-        >
-            <form>
-            { data.map((tab, index) => (
-                <div key={index}>
-
-                    <button onClick={(e) => eventHandler(e, index)}
-                    className={index === active ? 'active' : 'inactive'}
-                    >
-                        <div className="title-wrapper">
-                            {tab.title}
+        <div>
+            <form>     
+                { data.map((tab, index) => (
+                    <div key={index}>
+                        <h3>
+                            <button 
+                                onClick={(e) => eventHandler(e, index)}
+                                className={ active === index ? 'active' : 'inactive'}
+                                aria-expanded={ active === index ? 'true' : 'false' }
+                                aria-controls={ 'sect-' + indexCount(index) }
+                                aria-disabled={ active === index ? 'true' : 'false' }
+                            >
+                                <span className="title-wrapper">{tab.title}
+                                    <span className={ active === index  ? 'plus' : 'minus'}></span>
+                                </span>  
+                            </button>
+                        </h3>
+                        <div id={ 'sect-' + indexCount(index) } className={ active === index  ? 'panel-open' : 'panel-close' }>
+                                { tab.description }
                         </div>
-                        <div className={index === active ? 'plus' : 'minus'}></div>
-                    </button>
-                    <div className={ index === active ? 'panel-open' : 'panel-close' }>
-                            { tab.description }
                     </div>
-                </div>
-                ))
-            }
+                    ))
+                }
             </form>
         </div>
     );

@@ -9,7 +9,7 @@ function App() {
       <div className="content">
         <div className="app-description">
           <a href="https://peteraiello.dev" rel="noreferrer" target="_blank"><img src={logo} className="peter-aiello-logo" alt="logo" /></a>
-          <h3>Custom React Accordion</h3>
+          <h1>Custom React Accordion</h1>
         </div>
 
       <Accordion />

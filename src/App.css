@@ -24,6 +24,7 @@ a {
 
 h3 {
   font-size: 1.75rem;
+  margin: 0;
 }
 
 p { 
@@ -45,10 +46,6 @@ button {
   padding: 1rem;
 }
 
-button:focus{
-  outline: none;
-}
-
 button.active {
   background-color: #dfbd85;
   color: #ffffff;
@@ -60,24 +57,28 @@ button:hover {
 }
 
 .title-wrapper {
-  flex: 1;
+  display: block;
+  position: relative;
+  width: 100%;
 }
 
 .minus {
   content: url('../src/assets/line.svg');
-  display: block;
   width: 24px;
   height: 24px;
+  position: absolute;
+  right: 0;
 }
 
 .plus {
   content: url('../src/assets/plus.svg');
-  display: block;
   width: 24px;
   height: 24px;
   transform: rotate(90deg);
   transition-timing-function: ease-in;
   transition: all 1s;
+  position: absolute;
+  right: 0;
 }
 
 .panel-close { 
