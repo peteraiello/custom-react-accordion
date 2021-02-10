@@ -10,7 +10,6 @@ const Accordion = () => {
     const eventHandler = (e, index) => {
         e.preventDefault();
         setActive(index);
-        console.log(active);
     }
 
     const indexCount = (index) => {
@@ -30,6 +29,7 @@ const Accordion = () => {
                                 aria-expanded={ active === index ? 'true' : 'false' }
                                 aria-controls={ 'sect-' + indexCount(index) }
                                 aria-disabled={ active === index ? 'true' : 'false' }
+                                tabIndex={indexCount(index)}
                             >
                                 <span className="title-wrapper">{tab.title}
                                     <span className={ active === index  ? 'plus' : 'minus'}></span>

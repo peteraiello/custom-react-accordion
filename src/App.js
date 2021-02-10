@@ -10,6 +10,7 @@ function App() {
         <div className="app-description">
           <a href="https://peteraiello.dev" rel="noreferrer" target="_blank"><img src={logo} className="peter-aiello-logo" alt="logo" /></a>
           <h1>Custom React Accordion</h1>
+          <p>Choose the section using the Tab key. Press Enter to open. Shift + Tab to go to select the previous section.</p>
         </div>
 
       <Accordion />
