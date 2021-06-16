@@ -50,7 +50,7 @@ A minimal and accessible accordion app, created using [Create React App](https:/
 - The JSON data is iterated by using the `.map` JS function. 
 - The values for `key`, `index`, `title` and `description` are passed into `AccordionItem` as props.
 
-```
+```jsx
 <AccordionWrapper>
     {data.map((item, index) => (
         <AccordionItem key={index} index={index} title={item.title} description={item.description} />
@@ -66,11 +66,12 @@ A minimal and accessible accordion app, created using [Create React App](https:/
 - State is updated in the `AccordionItem` using `setActive` with the `onClick` function.
 - The functionality is implemented by comparing the value of `index` with the value of `active` 
 
-```
+```jsx
 className={ active === props.index  ? 'panel-open' : 'panel-close' }
 ```
 
-# Questions
+# Contact
 
 Most responsive to email: [hello@peteraiello.dev](mailto:hello@peteraiello.dev).
 
+### Thank you and good luck!
