@@ -1,27 +1,35 @@
 # Custom React Accordion
 
-![accordion screenshot](accordion-app.png)
+![accordion screenshot](https://wordpress.peteraiello.co.uk/wp-content/uploads/2021/02/Custom-React-Accordion.jpg)
+
+# Demo
+
+Demo available [here](https://peteraiello.github.io/custom-react-accordion/).
 
 # Description
 
-A minimal and accessible accordion app, created using [Create React App](https://create-react-app.dev/) for the purpose of helping me understand more about the infrastructure of React. 
+A minimal and accessible accordion app, created using [Create React App](https://create-react-app.dev/) to help me understand more about the infrastructure of React. 
 
-# Get Started Quickly
+# Get Started
 
-- Clone the repo
+- Clone the repo.
 - `cd custom-react-accordion`
-- run `npm install` to install the packages
-- `npm start` to run dev server, i.e. `localhost:3000/custom-react-accordion`
+- run `npm install` to install the packages.
+- `npm start` to run the dev server, i.e. `localhost:3000/custom-react-accordion`
 
 # Component Brief
 
 - The first item of the accordion should be active by default. 
-- The markup and design patterns of the component should adhere to W3 accessibility standards as per their [documentation](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion) (this includes keyboard input and the appropriate aria controls).
+- The markup and design patterns of the component should adhere to W3 accessibility standards as per their [documentation](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion) (this includes keyboard input and the appropriate aria-controls).
 - The content of the accordion should be compatible with JSON formatted data. 
 
 # How it Works
 
-The accordion is designed to work with an array of JSON. The objects in the array include the values of `title` and `description`, which make up the content for each accordion item.  
+**JSON structure**
+
+- The content for each accordion item is designed to work using JSON data. 
+- The JSON data includes an array of objects for each accordion item.
+- The objects include values for the `title` and `description`.
 
 ```
 [
@@ -36,7 +44,11 @@ The accordion is designed to work with an array of JSON. The objects in the arra
 ]
 ```
 
-The JSON date is wrapped in the `AccordionWrapper` component and iterated through using `.map`, passing in the array index, as well as the `title` and `description` values to the `AccordionItem` as props. 
+**Design structure**
+
+- The markup for the accordion begins by using the `AccordionWrapper` component. 
+- The JSON data is iterated by using the `.map` JS function. 
+- The values for `key`, `index`, `title` and `description` are passed into `AccordionItem` as props.
 
 ```
 <AccordionWrapper>
@@ -46,10 +58,19 @@ The JSON date is wrapped in the `AccordionWrapper` component and iterated throug
 </AccordionWrapper>
 ```
 
-The state for `active` is created globally in the `AccordionWrapper` using [context](https://reactjs.org/docs/context.html), which makes state accessible in nested components (i.e. `AccordionItem`).
+**State management**
 
-The state for active is updated via an `onClick` function and the majority of the functionality is implemented by comparing the integer for the active state with the item index.
+- The accordion uses [context](https://reactjs.org/docs/context.html) to manage the state globally.
+- The context for the `active` state is created inside `AccordionWrapper`.
+- The context for `active` also includes a function for updating the state (`setActive`).
+- State is updated in the `AccordionItem` using `setActive` with the `onClick` function.
+- The functionality is implemented by comparing the value of `index` with the value of `active` 
 
 ```
 className={ active === props.index  ? 'panel-open' : 'panel-close' }
 ```
+
+# Questions
+
+Most responsive to email: [hello@peteraiello.dev](mailto:hello@peteraiello.dev).
+
