@@ -46,6 +46,8 @@ The JSON date is wrapped in the `AccordionWrapper` component and iterated throug
 </AccordionWrapper>
 ```
 
+<script src="https://gist.github.com/peteraiello/fcaf4349c83db2d2699efb03d5c12b4e.js"></script>
+
 The state for `active` is created globally in the `AccordionWrapper` using [context](https://reactjs.org/docs/context.html), which makes state accessible in nested components (i.e. `AccordionItem`).
 
 The state for active is updated via an `onClick` function and the majority of the functionality is implemented by comparing the integer for the active state with the item index.
