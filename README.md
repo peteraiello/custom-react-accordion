@@ -6,6 +6,13 @@
 
 A minimal and accessible accordion app, created using [Create React App](https://create-react-app.dev/) for the purpose of helping me understand more about the infrastructure of React. 
 
+# Get Started Quickly
+
+- Clone the repo
+- `cd custom-react-accordion`
+- run `npm install` to install the packages
+- `npm start` to run dev server, i.e. `localhost:3000/custom-react-accordion`
+
 # Component Brief
 
 - The first item of the accordion should be active by default. 
