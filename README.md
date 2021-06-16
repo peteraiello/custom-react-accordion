@@ -19,7 +19,7 @@ A minimal and accessible accordion app, created using [Create React App](https:/
 - The markup and design patterns of the component should adhere to W3 accessibility standards as per their [documentation](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion) (this includes keyboard input and the appropriate aria controls).
 - The content of the accordion should be compatible with JSON formatted data. 
 
-# How it works
+# How it Works
 
 The accordion is designed to work with an array of JSON. The objects in the array include the values of `title` and `description`, which make up the content for each accordion item.  
 
