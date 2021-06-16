@@ -17,7 +17,7 @@ A minimal and accessible accordion app, created using [Create React App](https:/
 - run `npm install` to install the packages.
 - `npm start` to run the dev server (`localhost:3000/custom-react-accordion`).
 
-# Component Brief
+# App Brief
 
 - The first item of the accordion should be active by default. 
 - The markup and design patterns of the component should adhere to W3 accessibility standards as per their [documentation](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion) (this includes keyboard input and the appropriate aria-controls).
