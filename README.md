@@ -4,17 +4,17 @@
 
 # Description
 
-A minimal and accessible accordion app, made using [Create React App](https://create-react-app.dev/) to help me understand more about developing UI with React. 
+A minimal and accessible accordion app, created using [Create React App](https://create-react-app.dev/) for the purpose of helping me understand more about the infrastructure of React. 
 
 # Component Brief
 
 - The first item of the accordion should be active by default. 
 - The markup and design patterns of the component should adhere to W3 accessibility standards as per their [documentation](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion) (this includes keyboard input and the appropriate aria controls).
-- The app should work using JSON formatted data. 
+- The content of the accordion should be compatible with JSON formatted data. 
 
 # How it works
 
-The accordion is designed to work with an array of JSON data. The objects in the array include the values `title` and `description`, which make up the content for each accordion item.  
+The accordion is designed to work with an array of JSON. The objects in the array include the values of `title` and `description`, which make up the content for each accordion item.  
 
 ```
 [
@@ -26,9 +26,10 @@ The accordion is designed to work with an array of JSON data. The objects in the
     "title": "Item 2",
     "description": "Lorem ipsum."
   }
+]
 ```
 
-The accordion is wrapped in the `AccordionWrapper` component and the JSON is iterated through using `.map`, passing in the `title` and `description` values to the `AccordionItem` component as props. 
+The JSON date is wrapped in the `AccordionWrapper` component and iterated through using `.map`, passing in the array index, as well as the `title` and `description` values to the `AccordionItem` as props. 
 
 ```
 <AccordionWrapper>
@@ -38,12 +39,10 @@ The accordion is wrapped in the `AccordionWrapper` component and the JSON is ite
 </AccordionWrapper>
 ```
 
-`AccordionWrapper` uses [context](https://reactjs.org/docs/context.html) as a means of controlling the state globally, creating a state for `active` as well as a function of `setActive` for updating the state within nested components.
+The state for `active` is created globally in the `AccordionWrapper` using [context](https://reactjs.org/docs/context.html), which makes state accessible in nested components (i.e. `AccordionItem`).
 
-The state is updated via an `onClick` function within `AccordionItem`. The show and hide of the panel, as well as the various aria-controls, are implemented by conditional statements, that compare the current index integer to the active state: 
+The state for active is updated via an `onClick` function and the majority of the functionality is implemented by comparing the integer for the active state with the item index.
 
 ```
 className={ active === props.index  ? 'panel-open' : 'panel-close' }
 ```
-
-
