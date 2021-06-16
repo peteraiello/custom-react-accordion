@@ -15,7 +15,7 @@ A minimal and accessible accordion app, created using [Create React App](https:/
 - Clone the repo.
 - `cd custom-react-accordion`
 - run `npm install` to install the packages.
-- `npm start` to run the dev server, i.e. `localhost:3000/custom-react-accordion`
+- `npm start` to run the dev server (`localhost:3000/custom-react-accordion`).
 
 # Component Brief
 
