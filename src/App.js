@@ -1,16 +1,29 @@
 
-import React, { useState } from 'react';
 import logo from './assets/peter-aiello-logo.svg';
-/* Accordion specific */
-import data from './data.json';
-import Accordion from './components/Accordion';
 import AccordionWrapper from './components/AccordionWrapper'; 
 import AccordionItem from './components/AccordionItem';
-import AccordionTitle from './components/AccordionTitle';
-import AccordionPanel from './components/AccordionPanel';
 import './Accordion.css';
 
 function App() {
+
+  const data = [
+    {
+      "title": "Item 1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a consequat nibh. Mauris suscipit arcu at fermentum convallis. Pellentesque consectetur mi in felis maximus posuere."
+    },
+    {
+      "title": "Item 2",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In molestie tellus a maximus tempus. Duis vel leo iaculis, porttitor erat et, posuere erat. Ut blandit."
+    },
+    {
+      "title": "Item 3",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lacinia, nibh imperdiet tempus pharetra, arcu risus aliquet arcu, a auctor ex lacus efficitur purus. Morbi."
+    },
+    {
+      "title": "Item 4",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat lobortis nibh, eu molestie est placerat non. Donec ornare nisl erat, non imperdiet elit porta."
+    }
+  ];
 
   return (
     <div className="App">
@@ -22,9 +35,9 @@ function App() {
         </div>
         <div className="app-wrapper">
           <AccordionWrapper>
-              <AccordionItem index={0} title={'item 1'} description={'lorem ipsum'} />
-              <AccordionItem index={1} title={'item 2'} description={'lorem ipsum'} />
-              <AccordionItem index={2} title={'item 3'} description={'lorem ipsum'} />
+            {data.map((item, index) => (
+              <AccordionItem key={index} index={index} title={item.title} description={item.description} />
+            ))}
           </AccordionWrapper>
         </div>
       </div>
