@@ -26,7 +26,6 @@ const AccordionItem = (props) => {
                     aria-expanded={ active === props.index ? 'true' : 'false' }
                     aria-controls={ 'sect-' + indexCount(props.index) }
                     aria-disabled={ active === props.index ? 'true' : 'false' }
-                    tabIndex={indexCount(props.index)}
                 >
                     <span className="title-wrapper">{props.title}
                         <span className={ active === props.index ? 'plus' : 'minus'}></span>

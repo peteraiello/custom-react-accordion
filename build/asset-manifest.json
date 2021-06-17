@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/custom-react-accordion/static/css/main.f22925a6.chunk.css",
-    "main.js": "/custom-react-accordion/static/js/main.5f640069.chunk.js",
-    "main.js.map": "/custom-react-accordion/static/js/main.5f640069.chunk.js.map",
+    "main.js": "/custom-react-accordion/static/js/main.54059716.chunk.js",
+    "main.js.map": "/custom-react-accordion/static/js/main.54059716.chunk.js.map",
     "runtime-main.js": "/custom-react-accordion/static/js/runtime-main.ef908c87.js",
     "runtime-main.js.map": "/custom-react-accordion/static/js/runtime-main.ef908c87.js.map",
     "static/js/2.00968f1f.chunk.js": "/custom-react-accordion/static/js/2.00968f1f.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.ef908c87.js",
     "static/js/2.00968f1f.chunk.js",
     "static/css/main.f22925a6.chunk.css",
-    "static/js/main.5f640069.chunk.js"
+    "static/js/main.54059716.chunk.js"
   ]
 }
