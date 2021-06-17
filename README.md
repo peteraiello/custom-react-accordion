@@ -70,6 +70,12 @@ A minimal and accessible accordion app, created using [Create React App](https:/
 className={ active === props.index  ? 'panel-open' : 'panel-close' }
 ```
 
+# Accessibility
+
+- Markup includes the appropriate aria attributes (`aria-expanded`, `aria-controls`, `aria-disabled`).
+- Accordion is usable with keyboard only (`Tab` and `Shift+Tab` to switch and `Enter` to open tab). 
+- Tested with the [WAVE accessibility tool](https://wave.webaim.org/extension/).
+
 # Contact
 
 Most responsive to email: [hello@peteraiello.dev](mailto:hello@peteraiello.dev).
