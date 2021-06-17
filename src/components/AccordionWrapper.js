@@ -15,9 +15,11 @@ const AccordionWrapper = (props) => {
                 active, setActive
             }}
         >
+        <div className="accordion-wrapper">
             <form>
                 {props.children}
             </form>
+        </div>
         </AccordionContext.Provider>
     )
 }

@@ -3,6 +3,7 @@ import logo from './assets/peter-aiello-logo.svg';
 import AccordionWrapper from './components/AccordionWrapper'; 
 import AccordionItem from './components/AccordionItem';
 import './Accordion.css';
+import './App.css';
 
 function App() {
 
@@ -33,16 +34,14 @@ function App() {
           <h1>Custom React Accordion</h1>
           <p>Choose the section using the Tab key. Press Enter to open. Shift + Tab to go to select the previous section.</p>
         </div>
-        <div className="app-wrapper">
           <AccordionWrapper>
             {data.map((item, index) => (
               <AccordionItem key={index} index={index} title={item.title} description={item.description} />
             ))}
           </AccordionWrapper>
-        </div>
       </div>
       <footer className="footer">
-            <p>Code on <a href="https://github.com/peteraiello/custom-react-accordion" rel="noreferrer" target="_blank">GitHub</a></p>
+        <p>Code on <a href="https://github.com/peteraiello/custom-react-accordion" rel="noreferrer" target="_blank">GitHub</a></p>
       </footer>
     </div>
   );

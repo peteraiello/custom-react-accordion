@@ -1,0 +1,23 @@
+.App .content {
+  min-height: calc(100vh - 150px);
+  max-width: 500px;
+  margin: 5rem auto 0 auto;
+  padding: 0 1rem;
+}
+
+.App .content .app-description {
+  text-align: center;
+}
+
+.App .content .app-description p { 
+  line-height: 1.75rem;
+}
+
+.footer {
+  text-align: center;
+  height: 50px;
+}
+
+.footer a {
+  color: #DFBD85;
+}

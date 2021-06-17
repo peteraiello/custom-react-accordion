@@ -18,8 +18,8 @@ const AccordionItem = (props) => {
      }
 
     return (
-        <div>
-            <h3>
+        <div className="accordion-item">
+            <h3 className="accordion-title">
                 <button 
                     onClick={(e) => eventHandler(e, props.index)}
                     className={ active === props.index ? 'active' : 'inactive'}
@@ -32,7 +32,7 @@ const AccordionItem = (props) => {
                     </span>  
                 </button>
             </h3>
-            <div>
+            <div className="accordion-panel">
                 <div id={ 'sect-' + indexCount(props.index) } className={ active === props.index  ? 'panel-open' : 'panel-close' }>
                     {props.description}
                 </div>

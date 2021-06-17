@@ -1,37 +1,9 @@
-/* 
-  #dark-grey: #333333;
-  #medium-grey: #999999;
-  #orange-highlight: #DFBD85;
-  #medium-light-grey: #c4c4c4;
-  #light-grey: #e0e0e0;
-  #sandy-grey: #f2f1e8;
-*/
-
-a {
-  color: #DFBD85;
-}
-
-.content {
-  min-height: calc(100vh - 150px);
-  max-width: 500px;
-  margin: 5rem auto 0 auto;
-  padding: 0 1rem;
-}
-
-.app-description {
-  text-align: center;
-}
-
-h3 {
+.accordion-wrapper .accordion-item h3.accordion-title {
   font-size: 1.75rem;
   margin: 0;
 }
 
-p { 
-  line-height: 1.75rem;
-}
-
-button {
+.accordion-wrapper .accordion-item h3.accordion-title button {
   display: flex;
   align-items: center;
   background: #c4c4c4;
@@ -46,23 +18,23 @@ button {
   padding: 1rem;
 }
 
-button.active {
+.accordion-wrapper .accordion-item h3.accordion-title button.active {
   background-color: #dfbd85;
   color: #ffffff;
   border: #dfbd85 solid 1px;
 }
 
-button:hover {
+.accordion-wrapper .accordion-item h3.accordion-title button:hover {
     background-color: #dfbd85;
 }
 
-.title-wrapper {
+.accordion-wrapper .accordion-item h3.accordion-title button span.title-wrapper {
   display: block;
   position: relative;
   width: 100%;
 }
 
-.minus {
+.accordion-wrapper .accordion-item h3.accordion-title button span.title-wrapper .minus {
   content: url('../src/assets/line.svg');
   width: 24px;
   height: 24px;
@@ -70,7 +42,7 @@ button:hover {
   right: 0;
 }
 
-.plus {
+.accordion-wrapper .accordion-item h3.accordion-title button span.title-wrapper .plus {
   content: url('../src/assets/plus.svg');
   width: 24px;
   height: 24px;
@@ -81,7 +53,7 @@ button:hover {
   right: 0;
 }
 
-.panel-close { 
+.accordion-wrapper .accordion-item .accordion-panel .panel-close { 
   background: #e0e0e0;
   box-sizing: border-box;
   padding: 0.5rem 1rem 0 1rem;
@@ -93,7 +65,7 @@ button:hover {
   transition: all 1s;
 }
 
-.panel-open {
+.accordion-wrapper .accordion-item .accordion-panel .panel-open {
   overflow: hidden;
   background: #e0e0e0;
   padding: 1rem;
@@ -107,11 +79,7 @@ button:hover {
   transition: all 1s;
 }
 
-.panel p {
+.accordion-wrapper .accordion-item .accordion-panel p {
   margin: 0;
 }
 
-.footer {
-  text-align: center;
-  height: 50px;
-}
