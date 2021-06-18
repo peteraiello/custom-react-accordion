@@ -4,6 +4,7 @@
 }
 
 .accordion-wrapper .accordion-item h3.accordion-title button {
+  position: relative;
   display: flex;
   align-items: center;
   background: #c4c4c4;
@@ -33,24 +34,26 @@
   position: relative;
   width: 100%;
 }
+.accordion-wrapper .accordion-item h3.accordion-title button span.icon-wrapper {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+}
 
-.accordion-wrapper .accordion-item h3.accordion-title button span.title-wrapper .minus {
+
+.accordion-wrapper .accordion-item h3.accordion-title button span.icon-wrapper span.minus {
   content: url('../src/assets/line.svg');
   width: 24px;
   height: 24px;
-  position: absolute;
-  right: 0;
 }
 
-.accordion-wrapper .accordion-item h3.accordion-title button span.title-wrapper .plus {
+.accordion-wrapper .accordion-item h3.accordion-title button span.icon-wrapper span.plus {
   content: url('../src/assets/plus.svg');
   width: 24px;
   height: 24px;
   transform: rotate(90deg);
   transition-timing-function: ease-in;
   transition: all 1s;
-  position: absolute;
-  right: 0;
 }
 
 .accordion-wrapper .accordion-item .accordion-panel .panel-close { 

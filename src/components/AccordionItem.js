@@ -29,8 +29,10 @@ const AccordionItem = (props) => {
                     aria-disabled={ active === props.index ? 'true' : 'false' }
                 >
                     <span className="title-wrapper">{props.title}
-                        <span className={ active === props.index ? 'plus' : 'minus'}></span>
                     </span>  
+                    <span className="icon-wrapper">
+                        <span className={ active === props.index ? 'plus' : 'minus'}></span>
+                    </span>
                 </button>
             </h3>
             <div className="accordion-panel">
@@ -47,8 +49,5 @@ AccordionItem.propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired
 }
-
-
-
 
 export default AccordionItem; 
