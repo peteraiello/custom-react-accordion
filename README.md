@@ -8,7 +8,7 @@ Demo available [here](https://peteraiello.github.io/custom-react-accordion/).
 
 # Description
 
-A minimal and accessible accordion app, created using [Create React App](https://create-react-app.dev/) to help me understand more about the infrastructure of React. 
+A minimal and accessible accordion app, created using [Create React App](https://create-react-app.dev/) to help me understand more about the ecosystem of React. 
 
 # Get Started
 
@@ -48,7 +48,7 @@ A minimal and accessible accordion app, created using [Create React App](https:/
 
 - The markup for the accordion begins by using the `AccordionWrapper` component. 
 - The JSON data is iterated by using the `.map` JS function. 
-- The values for `key`, `index`, `title` and `description` are passed into `AccordionItem` as props.
+- The values for `index`, `title` and `description` are passed into `AccordionItem` as props.
 
 ```jsx
 <AccordionWrapper>

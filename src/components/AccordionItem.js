@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
 import {AccordionContext} from './AccordionWrapper';
 
 const AccordionItem = (props) => {
@@ -40,5 +41,14 @@ const AccordionItem = (props) => {
         </div>
     )
 }
+
+AccordionItem.propTypes = {
+    index: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired
+}
+
+
+
 
 export default AccordionItem; 
