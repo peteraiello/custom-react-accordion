@@ -15,34 +15,22 @@ Demo available [here](https://peteraiello.github.io/custom-react-accordion/).
 
 A minimal and accessible accordion app, created using [Create React App](https://create-react-app.dev/) to help me understand more about the ecosystem of React. 
 
-# Get Started
-
-- Clone the repo.
-- `cd custom-react-accordion`
-- run `npm install` to install the packages.
-- `npm start` to run the dev server (`localhost:3000/custom-react-accordion`).
-
-# App Brief
+**Initial accordion brief**
 
 - The first item of the accordion should be active by default. 
 - The markup and design patterns of the component should adhere to W3 accessibility standards as per their [documentation](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion) (this includes keyboard input and the appropriate aria-controls).
 - The content of the accordion should be compatible with JSON formatted data. 
 
-# Props
+# How to use
 
-| Prop        | Component        | Type        | Required           | Description                     | 
-| ----------- | ---------------- | ----------- | ------------------ | ------------------------------- |
-| Index       | `AccordionItem`  | Number      | :white_check_mark: | The index of the array.         |
-| Title       | `AccordionItem`  | String      | :white_check_mark: | Title for each tab.             |
-| Description | `AccordionItem`  | String      | :white_check_mark: | Text for the open panel.        |
+The app isn't currently published as an NPM package. However, if you wished to use with a React based project (such as `create-react-app`), simply: 
+- clone the repo into a `lib` directory.
+- import the two components `AccordionItem` and `AccordionWrapper` from the app's `src` folder.
+- import the default CSS, `Accordion.css` from the `src` folder.
 
-# How it Works
+**Using JSON (recommended)**
 
-**JSON structure**
-
-- The content for each accordion item is designed to work using JSON data. 
-- The JSON data includes an array of objects for each accordion item.
-- The objects include values for the `title` and `description`.
+Format your accordion content as JSON data:
 
 ```json
 [
@@ -57,11 +45,7 @@ A minimal and accessible accordion app, created using [Create React App](https:/
 ]
 ```
 
-**Design structure**
-
-- The markup for the accordion begins by using the `AccordionWrapper` component. 
-- The JSON data is iterated by using the `.map` JS function. 
-- The values for `index`, `title` and `description` are passed into `AccordionItem` as props.
+Iterate through JSON and pass in the relevant values as props: 
 
 ```jsx
 <AccordionWrapper>
@@ -71,17 +55,25 @@ A minimal and accessible accordion app, created using [Create React App](https:/
 </AccordionWrapper>
 ```
 
-**State management**
+**Without JSON**
 
-- The accordion uses [context](https://reactjs.org/docs/context.html) to manage the state globally.
-- The context for the `active` state is created inside `AccordionWrapper`.
-- The context for `active` also includes a function for updating the state (`setActive`).
-- State is updated in the `AccordionItem` using `setActive` with the `onClick` function.
-- The functionality is implemented by comparing the value of `index` with the value of `active` 
+Same format as above, except for adding the props manually: 
 
-```jsx
-className={ active === props.index  ? 'panel-open' : 'panel-close' }
+ ```jsx
+<AccordionWrapper>
+    <AccordionItem index={0} title={"1"} description={"lorem ipsum"}></AccordionItem>
+        <AccordionItem index={1} title={"item 2"} description={"lorem ipsum"}></AccordionItem>
+        <AccordionItem index={2} title={"item 3"} description={"lorem ipsum"}></AccordionItem>
+</AccordionWrapper>
 ```
+
+# Props
+
+| Prop        | Component        | Type        | Required           | Description                     | 
+| ----------- | ---------------- | ----------- | ------------------ | ------------------------------- |
+| Index       | `AccordionItem`  | Number      | :white_check_mark: | The index of the array.         |
+| Title       | `AccordionItem`  | String      | :white_check_mark: | Title for each tab.             |
+| Description | `AccordionItem`  | String      | :white_check_mark: | Text for the open panel.        |
 
 # Accessibility
 
