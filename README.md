@@ -15,7 +15,7 @@ Demo available [here](https://peteraiello.github.io/custom-react-accordion/).
 
 A minimal and accessible accordion app, created using [Create React App](https://create-react-app.dev/) to help me understand more about the ecosystem of React. 
 
-**Initial accordion brief**
+**Original accordion brief**
 
 - The first item of the accordion should be active by default. 
 - The markup and design patterns of the component should adhere to W3 accessibility standards as per their [documentation](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion) (this includes keyboard input and the appropriate aria-controls).
