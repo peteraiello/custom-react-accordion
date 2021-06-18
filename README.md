@@ -6,6 +6,11 @@
 
 Demo available [here](https://peteraiello.github.io/custom-react-accordion/).
 
+# Updates
+
+- Split the accordion into two smaller components (`AccordionWrapper` and `AccordionItem`).
+- Added `title` and `description` props to pass in content.
+
 # Description
 
 A minimal and accessible accordion app, created using [Create React App](https://create-react-app.dev/) to help me understand more about the ecosystem of React. 
@@ -23,6 +28,14 @@ A minimal and accessible accordion app, created using [Create React App](https:/
 - The markup and design patterns of the component should adhere to W3 accessibility standards as per their [documentation](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion) (this includes keyboard input and the appropriate aria-controls).
 - The content of the accordion should be compatible with JSON formatted data. 
 
+# Props
+
+| Prop        | Component        | Type        | Required           | Description                     | 
+| ----------- | ---------------- | ----------- | ------------------ | ------------------------------- |
+| Index       | `AccordionItem`  | Number      | :white_check_mark: | The index of the array.         |
+| Title       | `AccordionItem`  | String      | :white_check_mark: | Title for each tab.             |
+| Description | `AccordionItem`  | String      | :white_check_mark: | Text for the open panel.        |
+
 # How it Works
 
 **JSON structure**
@@ -31,7 +44,7 @@ A minimal and accessible accordion app, created using [Create React App](https:/
 - The JSON data includes an array of objects for each accordion item.
 - The objects include values for the `title` and `description`.
 
-```
+```json
 [
   {
     "title": "Item 1",
