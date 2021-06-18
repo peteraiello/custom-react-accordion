@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/custom-react-accordion/static/css/main.0822db43.chunk.css",
+    "main.css": "/custom-react-accordion/static/css/main.75cbe5bf.chunk.css",
     "main.js": "/custom-react-accordion/static/js/main.86bec584.chunk.js",
     "main.js.map": "/custom-react-accordion/static/js/main.86bec584.chunk.js.map",
     "runtime-main.js": "/custom-react-accordion/static/js/runtime-main.73e246c5.js",
@@ -10,7 +10,7 @@
     "static/js/3.cb257a62.chunk.js": "/custom-react-accordion/static/js/3.cb257a62.chunk.js",
     "static/js/3.cb257a62.chunk.js.map": "/custom-react-accordion/static/js/3.cb257a62.chunk.js.map",
     "index.html": "/custom-react-accordion/index.html",
-    "static/css/main.0822db43.chunk.css.map": "/custom-react-accordion/static/css/main.0822db43.chunk.css.map",
+    "static/css/main.75cbe5bf.chunk.css.map": "/custom-react-accordion/static/css/main.75cbe5bf.chunk.css.map",
     "static/js/2.00968f1f.chunk.js.LICENSE.txt": "/custom-react-accordion/static/js/2.00968f1f.chunk.js.LICENSE.txt",
     "static/media/Accordion.css": "/custom-react-accordion/static/media/plus.4827eb6b.svg",
     "static/media/peter-aiello-logo.396069cd.svg": "/custom-react-accordion/static/media/peter-aiello-logo.396069cd.svg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.73e246c5.js",
     "static/js/2.00968f1f.chunk.js",
-    "static/css/main.0822db43.chunk.css",
+    "static/css/main.75cbe5bf.chunk.css",
     "static/js/main.86bec584.chunk.js"
   ]
 }

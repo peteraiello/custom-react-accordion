@@ -34,6 +34,7 @@
   position: relative;
   width: 100%;
 }
+
 .accordion-wrapper .accordion-item h3.accordion-title button span.icon-wrapper {
   width: 10%;
   display: flex;
