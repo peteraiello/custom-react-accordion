@@ -23,7 +23,7 @@ A minimal and accessible accordion app, created using [Create React App](https:/
 
 # How to use
 
-The app isn't currently published as an NPM package. However, if you wished to use with a React based project (such as `create-react-app`), simply: 
+If you wish to use with a React based project (such as `create-react-app`), simply: 
 - clone the repo into a `lib` directory.
 - import the two components `AccordionItem` and `AccordionWrapper` from the app's `src` folder.
 - import the default CSS, `Accordion.css` from the `src` folder.
