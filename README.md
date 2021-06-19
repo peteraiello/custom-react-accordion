@@ -6,6 +6,8 @@
 
 Demo available [here](https://peteraiello.github.io/custom-react-accordion/).
 
+NPM Package [here](https://www.npmjs.com/package/custom-react-accordion)
+
 # Description
 
 A minimal and accessible accordion app, created using [Create React App](https://create-react-app.dev/) to help me understand more about the ecosystem of React. 
