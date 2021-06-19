@@ -6,7 +6,7 @@
 
 Demo available [here](https://peteraiello.github.io/custom-react-accordion/).
 
-NPM Package [here](https://www.npmjs.com/package/custom-react-accordion)
+NPM Package [here](https://www.npmjs.com/package/custom-react-accordion).
 
 # Description
 
