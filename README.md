@@ -1,6 +1,6 @@
 # Custom React Accordion
 
-![accordion screenshot](https://wordpress.peteraiello.co.uk/wp-content/uploads/2021/02/Custom-React-Accordion.jpg)
+![accordion screenshot](Custom-React-Accordion.jpg)
 
 # Demo
 
