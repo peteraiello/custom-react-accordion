@@ -1,6 +1,6 @@
 # Custom React Accordion
 
-![accordion screenshot](Custom-React-Accordion.jpg)
+![Custom-React-Accordion](https://user-images.githubusercontent.com/11468352/122650120-056fa800-d129-11eb-9caf-e1095a06478a.jpeg)
 
 # Demo
 
